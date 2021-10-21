@@ -1,11 +1,12 @@
 const path = require("path");
 const express = require("express");
-const mongoose = require("mongoose");
-const session = require("express-session");
-const MongoDBStore = require("connect-mongodb-session")(session);
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
 const errorController = require("./controllers/error");
 const User = require("./models/user");
-const mongoConnect = require('./util/database').mongoConnect;
+
 const app = express();
 const store = new MongoDBStore({
   uri: MONGODB_URI,
