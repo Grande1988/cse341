@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "https://morning-plateau-13760.herokuapp.com",
+  origin: "https://obscure-spire-89504.herokuapp.com",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
