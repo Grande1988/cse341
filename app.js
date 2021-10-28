@@ -5,7 +5,7 @@ const session = require("express-session");
 const MongoDBStore = require('connect-mongodb-session')(session);
 const errorController = require("./controllers/error");
 const User = require("./models/user");
-const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://reddgl:Legrindie1988@cluster0.sll31.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://reddgl:LeGrindie1988@cluster0.sll31.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -25,14 +25,10 @@ app.use(cors(corsOptions));
 const options ={
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  // useCreateIndex: true,
-  // useFindAndModify: false,
+  useCreateIndex: true,
+  useFindAndModify: false,
   family: 4
 };
-
-
-
-//const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
