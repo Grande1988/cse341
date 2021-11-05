@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "https://obscure-spire-89504.herokuapp.com",
+  origin: "https://git.heroku.com/shrouded-beyond-50935.git",
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
